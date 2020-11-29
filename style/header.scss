@@ -1,0 +1,122 @@
+.header__top {
+  padding-top: 19px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header__menu {
+  width: 666px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  > li > a {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-decoration: none;
+    color: #414042;
+  }
+}
+.box__language {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  > a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #828282;
+    text-decoration: none;
+  }
+  > div {
+    width: 1px;
+    height: 20px;
+    border: none;
+    border-radius: 2px;
+    background-color: #01A4A6;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+.header__block--form {
+  background-color: #003B56;
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+.header__form {
+  display: flex;
+  flex-direction: row;
+}
+.menu__button {
+  position: relative;
+  margin-right: 30px;
+  width: 270px;
+  height: 50px;
+}
+.catalog__button {
+  background: #5495EF;
+  border: none;
+  border-radius: 2px;
+  width: 270px;
+  padding: 14px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+}
+.header__search {
+  border: 1px solid #C4C4C4;
+  border-radius: 2px 0 0 2px;
+  padding: 14px 25px;
+  width: 717px;
+}
+.search__button {
+  width: 99px;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  background-color: #5495EF;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+@media (max-width: 575px) {
+  .header__top {
+    display: block;
+    position: relative;
+  }
+  .logo{
+    padding-left: 15px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .box__language {
+    display: none;
+  }
+  .header__block--form {
+    display: none;
+  }
+  .mobile__button {
+    background: #5495EF;
+    border: none;
+    border-radius: 2px;
+    width: 270px;
+    padding: 14px 0;
+    display: table;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #fff;
+  }
+}
+

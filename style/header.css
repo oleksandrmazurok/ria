@@ -1,0 +1,14 @@
+.header__top {
+  padding-top: 19px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.header__menu {
+  width: 666px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,138 @@
+
+.menu__icon--wrapper {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.menu__icon,.mobile__menu__icon{
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: -8px;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+}
+.menu__icon.menu__icon--active,.mobile__menu__icon.mobile__menu__icon--active{
+  background-color: transparent;
+  &::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+  &::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+}
+.drop__menu {
+  position: absolute;
+  top: 49px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  &--item {
+    position: relative;
+    background: #FFFFFF;
+    padding: 9px 19px 9px 50px;
+    margin-bottom: 1px;
+    transition: ease-in-out 0.5s;
+    &:hover {
+      background: #5495EF;
+    }
+    > img {
+      position: absolute;
+    }
+    > a {
+      text-decoration: none;
+      font-style: normal;
+      font-weight: normal;
+      color: #414042;
+    }
+  }
+}
+.img__pos--l {
+  left: 15px;
+  top: 8px;
+}
+.img__pos--r {
+  right: 13px;
+  top: 13px;
+}
+.drop-menu--hide {
+  display: none;
+}
+.drop-menu--show {
+  display: block;
+}
+.mobile__menu--wrapper{
+  display: none;
+}
+.drop-menu__wrap{
+  display: none;
+}
+@media (max-width: 575px) {
+  .drop__menu{
+    display: block;
+    position: inherit;
+    top: inherit;
+    z-index: inherit;
+  }
+  .drop-menu__wrap{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .burger__menu--hide{
+    display: none;
+  }
+  .drop-menu--show {
+    position: absolute;
+    bottom: -60px;
+    margin-top: 15px;
+    z-index: 3;
+  }
+  .mobile__menu--wrapper{
+    display: block;
+    left: inherit;
+    right: 5px;
+  }
+  .mobile__menu__icon{
+    background-color: #003B56;
+    &:before{
+      background-color: #003B56;
+    }
+    &:after{
+      background-color: #003B56;
+    }
+  }
+}
+
+
+

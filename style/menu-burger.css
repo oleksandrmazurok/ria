@@ -1,0 +1,46 @@
+.menu__icon--wrapper {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.menu__icon {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: #fff; }
+  .menu__icon::before {
+    position: absolute;
+    left: 0;
+    top: -8px;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s; }
+  .menu__icon::after {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s; }
+
+.menu__icon.menu__icon--active {
+  background-color: transparent; }
+  .menu__icon.menu__icon--active::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s; }
+  .menu__icon.menu__icon--active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s; }
+
+/*# sourceMappingURL=menu-burger.css.map */
